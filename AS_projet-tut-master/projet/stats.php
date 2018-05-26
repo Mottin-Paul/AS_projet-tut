@@ -30,9 +30,13 @@
 
 		$ageMoyen = $bdd -> query("SELECT ROUND(AVG(age)) FROM utilisateur");
 		$ageMoy = $ageMoyen -> fetchColumn();
+		
+		$reussiteMoyen = $bdd -> query("SELECT AVG(reussite_nota) FROM utilisateur");
+		$reussiteMoy = $reussiteMoyen -> fetchColumn();
 
 		echo("Il y a " . $nb . " personne qui ont effectuer notre test. </br>");
-		echo("L'age moyen des testeurs est de ".$ageMoy. " ans");
+		echo("L'age moyen des testeurs est de ".$ageMoy. " ans. </br>");
+		echo("La reussite moyenne des testeurs est de ".$reussiteMoy);
 
 		/*Verification des valeurs
 		$nbSexeF = $bdd -> query("SELECT COUNT(id_personne) FROM utilisateur WHERE sexe = 'femme'");
@@ -244,7 +248,7 @@
   // create area series with passed data
   var series = chart.bar(t);
   // set tooltip formatter
-  series.tooltip().titleFormatter(function(){return this.x});
+  series.tooltip().titleFormatter(function(){if(this.x==0){return "Pas de Jauge"} else{return "Avec jauge"}});
   series.tooltip().textFormatter(function () {
       return 'Valeur : ' + this.value.toLocaleString();
   });
@@ -406,7 +410,7 @@ WHERE reussite = "Oui"
 AND Jauge = 1';
 	$resUO = $bdd->query($sqlUO);
 	$jaugeUO = $resUO->fetchColumn();
-	$tab = array(["Jauge ",$jaugeZN,$jaugeZO],[" Pas de Jauge ",$jaugeUN , $jaugeUO]);  					// création du tableau PHP
+	$tab = array(["Pas de Jauge ",$jaugeZN,$jaugeZO],["Avec une Jauge ",$jaugeUN , $jaugeUO]);  					// création du tableau PHP
 
 print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au javascript
 ?>
