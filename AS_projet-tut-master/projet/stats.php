@@ -79,6 +79,14 @@
 
 
 		<div id='RepartitionHF'></div>
+		<style>
+         html, body, #RepartitionHF {
+             width: 100%;
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+        </style>
 		</br>
 		 <script type="text/javascript">
          anychart.onDocumentReady(function() {
@@ -134,6 +142,14 @@
 
         </script>
 		<div id='PersParNote'></div>
+		<style>
+         html, body, #PersParNote {
+             width: 100%;
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+        </style>
 
 				 <script type="text/javascript">
          anychart.onDocumentReady(function() {
@@ -191,6 +207,14 @@
         </script>
 
 		<div id='moyReussiteSexe'></div>
+		<style>
+         html, body, #moyReussiteSexe {
+             width: 100%;
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+        </style>
 						 <script type="text/javascript">
          anychart.onDocumentReady(function() {
 
@@ -247,9 +271,16 @@
         </script>
 
 		<div id='moyReussiteNotaJauge'></div>
+		<style>
+         html, body, #moyReussiteNotaJauge {
+             width: 100%;
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+        </style>
 						 <script type="text/javascript">
          anychart.onDocumentReady(function() {
-   // ne marche pas completement je comprend pas pourquoi. Une fois sur deux
                   	         	<?php
 
 	$sql0='CALL moyReussiteChemin(0);';
@@ -325,6 +356,14 @@
         </script>
 
 		<div id='moyReussiteChemin'></div>
+		<style>
+         html, body, #moyReussiteChemin {
+             width: 100%;
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+        </style>
 		
 		<script type="text/javascript">
          anychart.onDocumentReady(function(){
@@ -447,7 +486,9 @@ print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au ja
   chart.draw();
 });
         </script>
-                <style>
+         	
+        <div id='reussiteChemin'></div>
+               <style>
          html, body, #reussiteChemin {
              width: 100%;
              height: 100%;
@@ -455,7 +496,5 @@ print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au ja
              padding: 0;
          }
         </style>
-		
-        <div id='reussiteChemin'></div>
 	</body>
 </html>
