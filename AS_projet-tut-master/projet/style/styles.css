@@ -1,0 +1,235 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Roboto, sans-serif;
+	background-color: #F9F9F9;
+	height: 100%;
+}	
+
+.outer-div {
+	padding:30px;
+}
+	
+.inner-div{
+	margin:0 auto;
+	width:100px;
+}
+
+#header {
+	margin: 0px;
+	padding: 24px;
+	background-color:#425566;
+	color: white;
+	text-align: center;
+	width:auto;
+}
+
+#header h1{
+	font-size: 50px;
+}
+
+
+.title h2 {
+	font-size: 40px;
+}
+
+.title p {
+	font-size: 20px;
+	font-weight: normal;
+	padding: 0px 24px;
+}
+
+
+
+.admin {
+	position: absolute;
+	left: 75%;
+	display: inline-block;
+	background-color: white; 
+	margin-top: 20px;
+	margin-left: 20px;
+    padding: 20px;
+	border: 5px solid rgba(0, 0, 0, 0.14);
+}
+
+#question {
+	width:auto;
+	display:flex;
+	flex-direction:column;
+}
+
+.list {
+	background-color: white; 
+	width: auto;
+	margin-top: 20px;
+	margin-left: auto;
+    margin-right: auto;
+	border: 5px solid rgba(0, 0, 0, 0.14);
+	display: flex;
+	flex-direction: row;
+}
+
+.list_deb {
+	width: 50%;
+	margin-top: auto;
+	margin-left: auto;
+	margin-bottom: auto;
+}
+
+.list_deb li {
+	color: rgb(63, 81, 181);
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.list_deb li p {
+	margin: 0px 0px 0px 0px;
+	color: rgb(69, 90, 100);
+}
+
+
+.list_question {
+	background-color: white; 
+	width: auto;
+	height: auto;
+
+	margin-top: 20px;
+	margin-left: auto;
+    margin-right: auto;
+	border: 5px solid rgba(0, 0, 0, 0.14);
+	display: flex;
+	flex-direction: column;
+}
+
+.question p {
+	text-align:center;
+	white-space: normal;
+	color: rgb(69, 90, 100);
+	font-size: 22px;
+	font-weight: normal;
+	width: auto;
+}
+
+
+.reponse p {
+	font-size: 25px;
+	color: rgb(63, 81, 181);
+	font-weight: normal;
+	text-align:center;	
+	width: auto;
+}
+
+.jauge {
+	margin: 20px;
+}
+
+.image {
+	display:block;
+	
+	border: 5px solid rgba(0, 0, 0, 0.14);
+	margin:20px auto 20px auto;
+}
+
+.image img{
+	
+	min-width:300px;
+	max-width:449px;
+	min-height:168px;
+	max-height:318px;
+}
+
+
+.list_fin {
+	width: auto;
+}
+
+.list_fin li {
+	color: rgb(63, 81, 181);
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.list_fin li p {
+	margin: 0px 0px 0px 0px;
+	color: rgb(69, 90, 100);
+}
+
+.listcheckbox {	
+	
+    margin-right: auto;
+	display: flex;
+	flex-direction: row;
+	width:500px;
+}
+
+.checkbox{
+	width: auto;
+}
+
+
+.button{
+	margin: 20px;
+	text-align: center;
+}
+
+.button_accueil{
+	margin: 100px;
+	text-align: center;
+}
+
+.name {
+	text-align: center;
+	margin: 20px;
+}
+
+center{
+	margin:10px;
+}
+
+
+ {
+   font-size: 11px; /* On définit les propriétés de texte pour toutes les balises. */
+   font-family: Roboto, sans-serif;
+}
+
+a.info {
+   color: rgb(69, 90, 100);
+   text-decoration: none;
+   border-bottom: 1px gray dotted; /* On souligne le texte. */
+  
+}
+
+a.info span {
+   display: none; /* On masque l'infobulle. */
+   
+}
+
+a.info:hover {
+   background: none; /* Correction d'un bug d'Internet Explorer. */
+   z-index: 100; /* On définit une valeur pour l'ordre d'affichage. */
+   cursor: help; /* On change le curseur par défaut par un curseur d'aide. */
+}
+
+a.info:hover span {
+   display: block; /* On affiche l'infobulle. */
+   position: absolute;
+   white-space: normal; /* On change la valeur de la propriété white-space pour qu'il n'y ait pas de retour à la ligne non désiré. */
+   top: 100px; /* On positionne notre infobulle. */
+   left: 350px;
+   background: white;
+   color: rgb(63, 81, 181);
+   padding: 3px;
+   border: 1px solid rgba(0, 0, 0, 0.14);
+   border-left: 4px solid rgba(0, 0, 0, 0.14);
+   width:800px;
+}
+
+
+
+
+
+
+
+
+
+

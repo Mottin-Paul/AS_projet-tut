@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Emotions et Decisions</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" type="text/css" href="style/material-design-lite.css"/> 
+		<script type="text/javascript" src="js/material-design-lite.js"></script>	
+		<link rel="stylesheet" type="text/css" href="style/styles.css"/>
+	</head>
+
+
+	<body>
+		<div id="header">
+			<h1></h1>
+			<div class="title">
+				<h2>Informations</h2>
+				<p>Dans l'objectif d'avoir une analyse pertinente de vos réponses, nous avons besoin de quelques renseignements vous concernant,ces données ne seront accessible à aucun tiers, elles seront utilisées seulement dans le cadre de notre projet scolaire</p>
+			</div>
+		</div>
+		<form name="frm_debut" action="question_debut.php" method="post" required> <!-- fichier a créer va permettre d'envoyer les données ds la BD-->
+			<div  id = "question">
+				<div class = "list">
+					<div class ="list_deb">			
+						<ul>	
+							<li> Age : <br>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<p> 
+										<input type = "text" name="zs_age" class="mdl-textfield__input" pattern="[0-9]*" id="Age" required><br>
+										<label class="mdl-textfield__label" for="Age">Quel âge avez-vous ?</label>
+										<span class="mdl-textfield__error">Uniquement en nombre s'il vous plait !</span>
+									</p>
+								</div>								
+							</li>					
+							<li>		
+								Sexe : 
+								<span class="mdl-list__item-secondary-action">
+									<p>
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-homme">
+											<input type="radio" id="list-option-homme" class="mdl-radio__button" name="zs_genre" value="homme" checked required> Homme<br>
+										</label>
+									</p>
+									<p>
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-femme">
+											<input type="radio" id="list-option-femme" class="mdl-radio__button" name="zs_genre" value="femme" required> Femme<br>
+										</label>
+									</p>	
+								</span>				
+							</li>	
+							<br>	
+							<li>Situation familliale actuelle :  
+								<span class="mdl-list__item-secondary-action">
+									<p>
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-celibataire">
+											<input type="radio" id="list-option-celibataire" class="mdl-radio__button" name="zs_famille" value="celibataire" checked required> Célibataire<br>
+										</label>		
+									</p>
+									<p>
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-concubinage">		
+											<input type="radio" id="list-option-concubinage" class="mdl-radio__button" name="zs_famille" value="concubinage"  required> En couple<br>
+										</label>			
+									</p>
+									<p>
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-marrie">		
+											<input type="radio" id="list-option-marrie" class="mdl-radio__button" name="zs_famille" value="marrie" required> Marié<br>
+										</label>
+									</p>
+									<p>
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-divorce">		
+											<input type="radio" id="list-option-divorce" class="mdl-radio__button" name="zs_famille" value="divorce" required> Divorcé<br>
+										</label>
+									</p>							
+								</span>				
+							</li>
+							<br>
+							<li> Avez-vous des enfants ? Si oui combien ? <br>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<p> 
+										<input type = "text" name="zs_enfant" class="mdl-textfield__input" pattern="[0-9]*" id="Enfant" required><br>
+										<label class="mdl-textfield__label" for="Enfant">Combien d'enfant ?</label>
+										<span class="mdl-textfield__error">Uniquement en nombre s'il vous plait !</span>
+									</p>
+								</div>								
+							</li>
+							
+							<li> Sommeil : <br>
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<p>
+										<input type = "text" name = "zs_sommeil" class= "mdl-textfield__input" pattern="[0-9]*" id="heureSommeil" required><br>
+										<label class="mdl-textfield__label" for="heureSommeil">Combien d'heures dormez-vous par nuit ?</label>
+										<span class="mdl-textfield__error">Uniquement en nombre s'il vous plait !</span>
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<br>
+					<div class="list_deb">
+						<li>Catégorie socio-professionnelle :  
+								<span class="mdl-list__item-secondary-action">	
+									<p>
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-agriculteur">
+											<input type="radio" id="list-option-agriculteur" class="mdl-radio__button" name="zs_metier" value="agriculteur" checked required> Agriculteurs exploitants<br>
+										</label>	
+									</p>	
+									<p>		
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-autonome">	
+											<input type="radio" id="list-option-autonome" class="mdl-radio__button" name="zs_metier" value="autonome" required> Artisans, commerçants et chefs d’entreprise<br>
+										</label>
+									</p>
+									<p>		
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-cadre">	
+											<input type="radio" id="list-option-cadre" class="mdl-radio__button" name="zs_metier" value="cadre" required> Cadres et professions intellectuelles supérieures<br>
+										</label>
+									</p>								
+									<p>	
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-employe">
+											<input type="radio" id="list-option-employe" class="mdl-radio__button" name="zs_metier" value="employe" required> Employés<br>
+										</label>
+									</p>	
+									<p>		
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-etudiant">
+											<input type="radio" id="list-option-etudiant" class="mdl-radio__button" name="zs_metier" value="etudiant" required> Etudiant<br>
+										</label>
+									</p>
+									<p>		
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-ouvrier">
+											<input type="radio" id="list-option-ouvrier" class="mdl-radio__button" name="zs_metier" value="ouvrier" required> Ouvriers<br>
+										</label>
+									</p>
+									<p>		
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-intermediaire">	
+											<input type="radio" id="list-option-intermediaire" class="mdl-radio__button" name="zs_metier" value="intermediaire" required> Professions Intermédiaires<br>
+										</label>
+									</p>	
+									<p>		
+										<label class="demo-list-radio mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-option-chomage">
+											<input type="radio" id="list-option-chomage" class="mdl-radio__button" name="zs_metier" value="chomage" required> Sans Emploi<br>
+										</label>
+									</p>								
+								</span>		
+							</li>
+							<br>
+							<li> Travail : <br>
+								
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<p>
+										<input type ="text" name="zs_heure_metier" class="mdl-textfield__input" pattern="[0-9]*" id="heureTravail" required><br>  
+										<label class="mdl-textfield__label"  for="heureTravail">Nombre d'heure de travail par semaine ?</label>
+										<span class="mdl-textfield__error">Uniquement un nombre s'il vous plait !</span>
+									</p>
+								</div>
+								
+							</li>
+								
+							<li> Loisirs / Activités : <br>
+								
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<p>
+										<input type ="text" name="zs_activite" class="mdl-textfield__input" pattern="[A-Z," ",a-z]*" id="loisirsActivites" required><br>
+										<label class="mdl-textfield__label" for="loisirsActivites">Vos loisirs / activités ?</label>
+										<span class="mdl-textfield__error">Uniquement des lettres s'il vous plait !</span>
+									</p>
+								</div>
+									
+							
+								<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+									<p>
+										<input type ="text" name="zs_heure_act" class="mdl-textfield__input" pattern="[0-9]*" id="nbLoisirsActivites"  required><br>
+										<label class="mdl-textfield__label" for="nbLoisirsActivites">Nombres d'heures consacré par semaine ?</label>
+										<span class="mdl-textfield__error">Uniquement en nombre s'il vous plait !</span>
+									</p>
+								</div>	
+							</li>
+						</ul>	
+					</div>		
+				</div>
+				<div class="button">
+				<input class="mdl-button mdl-button--raised mdl-button--colored" type="submit" value="Continuer">
+				</div>
+			</div>
+		</form>
+	</body>
+</html>
