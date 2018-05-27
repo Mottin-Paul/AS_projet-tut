@@ -86,7 +86,7 @@
 		<style>
          html, body, #RepartitionHF {
              width: 100%;
-             height: 100%;
+             height: 50%;
              margin: 0;
              padding: 0;
          }
@@ -149,7 +149,7 @@
 		<style>
          html, body, #PersParNote {
              width: 100%;
-             height: 100%;
+             height: 50%;
              margin: 0;
              padding: 0;
          }
@@ -214,7 +214,7 @@
 		<style>
          html, body, #moyReussiteSexe {
              width: 100%;
-             height: 100%;
+             height: 50%;
              margin: 0;
              padding: 0;
          }
@@ -278,7 +278,7 @@
 		<style>
          html, body, #moyReussiteNotaJauge {
              width: 100%;
-             height: 100%;
+             height: 50%;
              margin: 0;
              padding: 0;
          }
@@ -363,7 +363,7 @@
 		<style>
          html, body, #moyReussiteChemin {
              width: 100%;
-             height: 100%;
+             height: 50%;
              margin: 0;
              padding: 0;
          }
@@ -495,7 +495,7 @@ print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au ja
                <style>
          html, body, #reussiteChemin {
              width: 100%;
-             height: 100%;
+             height: 50%;
              margin: 0;
              padding: 0;
          }
@@ -622,7 +622,7 @@ print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au ja
                <style>
          html, body, #reussiteSexe {
              width: 100%;
-             height: 100%;
+             height: 50%;
              margin: 0;
              padding: 0;
          }
@@ -782,7 +782,7 @@ print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au ja
                <style>
          html, body, #reussiteChemin {
              width: 100%;
-             height: 100%;
+             height: 50%;
              margin: 0;
              padding: 0;
          }
