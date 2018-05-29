@@ -186,6 +186,67 @@ print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au ja
              margin: 0;
              padding: 0;
          }
+         </style>
+             
+         <script type="text/javascript">
+         anychart.onDocumentReady(function(){
+         	<?php
+         	
+	$sql='SELECT csp, COUNT(id_personne) as nbPersCsp
+	FROM utilisateur
+	GROUP BY csp';
+	$res = $bdd->query($sql);
+	$tab = array(); // création du tableau PHP
+   	 while($lg=$res->fetchObject()){
+	$tab[]=[$lg ->csp, $lg -> nbPersCsp]; // alimentation du tableau php avec les données de la requête
+   	 }
+	print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au javascript
+?>
+  // create funnel chart
+  chart = anychart.pyramid(t);
+
+  // set container id for the chart
+  chart.container("CSP");
+
+  // set chart margin
+  chart.margin(10, '20%', 10, '20%');
+
+  // set chart legend settings
+  var legend = chart.legend();
+  legend.enabled(true);
+  legend.position("right");
+  legend.itemsLayout("vertical");
+  legend.align("top");
+
+  // set chart title
+  chart.title("Nombre d'utilisateur par CSP");
+
+  // set chart base width settings
+  chart.baseWidth("70%");
+
+  // set chart labels settings
+  var labels = chart.labels();
+  labels.position("outsideright");
+  labels.textFormatter(function() {
+    return this.value;
+  });
+
+  // initiate chart drawing
+  chart.draw();
+});
+        </script>
+         	
+        <div id='CSP'></div>
+            <style>
+         html, body, #CSP {
+             width: 100%;
+             height: 100%;
+             margin: 0;
+             padding: 0;
+         }
+        </style>
+         
+         <style>
         form {
 			display:inline;
 		}
