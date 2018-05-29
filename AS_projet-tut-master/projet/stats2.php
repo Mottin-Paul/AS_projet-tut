@@ -182,7 +182,7 @@
 			display:inline;
 		}
         </style>
-        
+        <center>
         <form name="frm" action="./stats.php" method="post">
 				<input class="mdl-button mdl-button--raised mdl-button--colored" type="submit" value="Précédent">
 		</form>
@@ -190,5 +190,6 @@
 		<form name="frm" action="./stats3.php" method="post">
 				<input class="mdl-button mdl-button--raised mdl-button--colored" type="submit" value="Suivant">
 		</form>
+		</center>
 	</body>
 </html>

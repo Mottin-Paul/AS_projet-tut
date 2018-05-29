@@ -252,13 +252,14 @@ print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au ja
 			display:inline;
 		}
         </style>
-        
+        <center>
         <form name="frm" action="./stats3.php" method="post">
 				<input class="mdl-button mdl-button--raised mdl-button--colored" type="submit" value="Précédent">
 		</form>
 		
 		<form name="frm" action="./stats5.php" method="post">
 				<input class="mdl-button mdl-button--raised mdl-button--colored" type="submit" value="Suivant">
-		</form> 
+		</form>
+		</center>
 	</body>
 </html>
