@@ -194,7 +194,8 @@ print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au ja
          	
 	$sql='SELECT csp, COUNT(id_personne) as nbPersCsp
 	FROM utilisateur
-	GROUP BY csp';
+	GROUP BY csp
+    ORDER BY nbPersCsp DESC';
 	$res = $bdd->query($sql);
 	$tab = array(); // création du tableau PHP
    	 while($lg=$res->fetchObject()){
