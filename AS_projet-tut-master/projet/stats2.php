@@ -98,32 +98,32 @@
 	$sqlFaux0='CALL moyReussiteChemin(0);';
 	$res = $bdd -> query($sqlFaux0);
 	
-	$sql0='CALL moyReussiteChemin(0);';
-	$res0 = $bdd -> query($sql0);
-	$chemin0 = $res0 -> fetchColumn();
-
-	$sqlFaux1='CALL moyReussiteChemin(0);';
-	$res4 = $bdd -> query($sqlFaux1);
-
 	$sql1='CALL moyReussiteChemin(1);';
 	$res1 = $bdd -> query($sql1);
 	$chemin1 = $res1 -> fetchColumn();
 
-	$sqlFaux5='CALL moyReussiteChemin(0);';
-	$res5 = $bdd -> query($sqlFaux5);
+	$sqlFaux1='CALL moyReussiteChemin(1);';
+	$res4 = $bdd -> query($sqlFaux1);
 
 	$sql2='CALL moyReussiteChemin(2);';
 	$res2 = $bdd -> query($sql2);
 	$chemin2 = $res2 -> fetchColumn();
 
+	$sqlFaux5='CALL moyReussiteChemin(0);';
+	$res5 = $bdd -> query($sqlFaux5);
+
+	$sql3='CALL moyReussiteChemin(3);';
+	$res3 = $bdd -> query($sql3);
+	$chemin3 = $res3 -> fetchColumn();
+
 	$sqlFaux6='CALL moyReussiteChemin(0);';
 	$res6 = $bdd -> query($sqlFaux6);
 
-	$sql3='CALL moyReussiteChemin(3);';
-	$res3 = $bdd->query($sql3);
-	$chemin3 = $res3 -> fetchColumn();
+	$sql0='CALL moyReussiteChemin(0);';
+	$res0 = $bdd->query($sql0);
+	$chemin0 = $res0 -> fetchColumn();
 
-	$tab = array(["Facile", $chemin0],["Facile - Difficile", $chemin1],["Difficile - Facile", $chemin2],["Difficile", $chemin3]); // création du tableau PHP
+	$tab = array(["Facile", $chemin1],["Facile - Difficile", $chemin2],["Difficile - Facile", $chemin3],["Difficile", $chemin0]); // création du tableau PHP
 
 	print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au javascript
 	?>

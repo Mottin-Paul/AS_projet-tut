@@ -32,23 +32,7 @@
          anychart.onDocumentReady(function(){
          	<?php
          	         	         	
-$sqlC0N='SELECT COUNT(DISTINCT utilisateur.id_personne) FROM jeux
-JOIN appartient on appartient.id_questionnaire = jeux.id_questionnaire
-JOIN utilisateur on utilisateur.id_personne = appartient.id_personne
-WHERE reussite = "Non"
-AND categorie = 0';
-	$resC0N = $bdd->query($sqlC0N);
-	$jaugeC0N = $resC0N -> fetchColumn();
-	
-	$sqlC0O='SELECT COUNT(DISTINCT utilisateur.id_personne) FROM jeux
-JOIN appartient on appartient.id_questionnaire = jeux.id_questionnaire
-JOIN utilisateur on utilisateur.id_personne = appartient.id_personne
-WHERE reussite = "Oui"
-AND categorie = 0';
-	$resC0O = $bdd->query($sqlC0O);
-	$jaugeC0O = $resC0O -> fetchColumn();
-	
-	$sqlC1N='SELECT COUNT(DISTINCT utilisateur.id_personne) FROM jeux
+$sqlC1N='SELECT COUNT(DISTINCT utilisateur.id_personne) FROM jeux
 JOIN appartient on appartient.id_questionnaire = jeux.id_questionnaire
 JOIN utilisateur on utilisateur.id_personne = appartient.id_personne
 WHERE reussite = "Non"
@@ -96,8 +80,24 @@ AND categorie = 3';
 	$resC3O = $bdd->query($sqlC3O);
 	$jaugeC3O = $resC3O -> fetchColumn();
 	
-	$tab = array(["Facile",$jaugeC0N,$jaugeC0O],["Facile - Difficile",$jaugeC1N , $jaugeC1O],
-	["Difficile - Facile",$jaugeC2N,$jaugeC2O],["Difficile",$jaugeC3N , $jaugeC3O]);  					// création du tableau PHP
+	$sqlC0N='SELECT COUNT(DISTINCT utilisateur.id_personne) FROM jeux
+JOIN appartient on appartient.id_questionnaire = jeux.id_questionnaire
+JOIN utilisateur on utilisateur.id_personne = appartient.id_personne
+WHERE reussite = "Non"
+AND categorie = 0';
+	$resC0N = $bdd->query($sqlC0N);
+	$jaugeC0N = $resC0N -> fetchColumn();
+	
+	$sqlC0O='SELECT COUNT(DISTINCT utilisateur.id_personne) FROM jeux
+JOIN appartient on appartient.id_questionnaire = jeux.id_questionnaire
+JOIN utilisateur on utilisateur.id_personne = appartient.id_personne
+WHERE reussite = "Oui"
+AND categorie = 0';
+	$resC0O = $bdd->query($sqlC0O);
+	$jaugeC0O = $resC0O -> fetchColumn();
+	
+	$tab = array(["Facile",$jaugeC1N,$jaugeC1O],["Facile - Difficile",$jaugeC2N , $jaugeC2O],
+	["Difficile - Facile",$jaugeC3N,$jaugeC3O],["Difficile",$jaugeC0N , $jaugeC0O]);  					// création du tableau PHP
 
 print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au javascript
 ?>
