@@ -13,7 +13,7 @@
 
 	<body>
 		<p>
-			Notre page de stats des joueurs
+			Notre page de statistique des joueurs
 		</p>
 
 		<?php
@@ -51,14 +51,14 @@
   chart.padding([10,10,10,10]);
 
   // set chart title text settings
-  chart.title('Note moyenne de reussite en fonction de l affichage de la jauge');
+  chart.title('Note moyenne de reussite en fonction de l\'affichage de la jauge');
 
   // create area series with passed data
   var series = chart.bar(t);
   // set tooltip formatter
   series.tooltip().titleFormatter(function(){if(this.x==0){return "Pas de Jauge"} else{return "Avec jauge"}});
   series.tooltip().textFormatter(function () {
-      return 'Valeur : ' + this.value.toLocaleString();
+      return 'Moyenne : ' + this.value.toLocaleString();
   });
   series.tooltip().position('right').anchor('left').offsetX(5).offsetY(0);
 
@@ -146,7 +146,7 @@
   // set tooltip formatter
   series.tooltip().titleFormatter(function(){return this.x});
   series.tooltip().textFormatter(function () {
-      return 'Valeur : ' + this.value.toLocaleString();
+      return 'Moyenne : ' + this.value.toLocaleString();
   });
   series.tooltip().position('right').anchor('left').offsetX(5).offsetY(0);
 

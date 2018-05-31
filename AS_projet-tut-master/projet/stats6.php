@@ -13,7 +13,7 @@
 
 	<body>
 		<p>
-			Notre page de stats des joueurs
+			Notre page de statistiques des joueurs
 		</p>
 
 		<?php
@@ -88,7 +88,7 @@
 					$deci_diff = $bdd->query($sql2);
 					$deci_diffP = $deci_diff -> fetchColumn();
 					
-					$tab = array(['N\'ont pas eu de decision difficile',$deci_diffV],['Ont eu des decision difficile',$deci_diffP]);  					// création du tableau PHP
+					$tab = array(['N\'ont pas eu de decision difficile',$deci_diffV],['Ont eu des decisions difficiles',$deci_diffP]);  					// création du tableau PHP
 
 					print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au javascript
 ?>

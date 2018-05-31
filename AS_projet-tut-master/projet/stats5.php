@@ -13,7 +13,7 @@
 
 	<body>
 		<p>
-			Notre page de stats des joueurs
+			Notre page de statistique des joueurs
 		</p>
 
 		<?php

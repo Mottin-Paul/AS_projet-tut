@@ -13,7 +13,7 @@
 
 	<body>
 		<p>
-			Notre page de stats des joueurs
+			Notre page de statistique des joueurs
 		</p>
 
 		<?php
@@ -119,9 +119,9 @@
   // create area series with passed data
   var series = chart.bar(t);
   // set tooltip formatter
-  series.tooltip().titleFormatter(function(){return this.x});
+  series.tooltip().titleFormatter(function(){return "Notes : " + this.x});
   series.tooltip().textFormatter(function () {
-      return 'Valeur : ' + parseInt(this.value).toLocaleString();
+      return parseInt(this.value).toLocaleString() +' Personne(s)' ;
   });
   series.tooltip().position('right').anchor('left').offsetX(5).offsetY(0);
 
@@ -132,7 +132,7 @@
 
   // set titles for axises
   chart.xAxis().title('Notes');
-  chart.yAxis().title('Nb Personne');
+  chart.yAxis().title('Nombre Personne');
   chart.interactivity().hoverMode('byX');
   chart.tooltip().positionMode('point');
   // set scale minimum
@@ -184,7 +184,7 @@
   // set tooltip formatter
   series.tooltip().titleFormatter(function(){return this.x});
   series.tooltip().textFormatter(function () {
-      return 'Valeur : ' + this.value.toLocaleString();
+      return 'Moyenne : ' + this.value.toLocaleString();
   });
   series.tooltip().position('right').anchor('left').offsetX(5).offsetY(0);
 

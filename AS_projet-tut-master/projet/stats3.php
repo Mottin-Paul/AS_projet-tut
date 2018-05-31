@@ -13,7 +13,7 @@
 
 	<body>
 		<p>
-			Notre page de stats des joueurs
+			Notre page de statistique des joueurs
 		</p>
 
 		<?php
@@ -122,7 +122,7 @@ print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au ja
       return this.x;
     });
     series.tooltip().textFormatter(function () {
-      return this.seriesName + ' : NbPersonne ' + parseInt(this.value).toLocaleString();
+      return this.seriesName + ' : ' + parseInt(this.value).toLocaleString() + ' personne(s)';
     });
     series.tooltip().position('right').anchor('left').offsetX(5).offsetY(0);
   };
@@ -249,7 +249,7 @@ print('var t='.json_encode($tab)); 		// encodage au format JSON et passage au ja
       return this.x;
     });
     series.tooltip().textFormatter(function () {
-      return this.seriesName + ' : NbPersonne ' + parseInt(this.value).toLocaleString();
+      return this.seriesName + ' : ' + parseInt(this.value).toLocaleString()+ ' personne(s)';
     });
     series.tooltip().position('right').anchor('left').offsetX(5).offsetY(0);
   };

@@ -12,7 +12,7 @@
 
 	<body>
 		<p>
-			Notre page de stats des joueurs
+			Notre page de statistiques des joueurs
 		</p>
 
 		<?php
@@ -167,9 +167,9 @@
 	<tr>
 	<td> Temps Moyen en fonction <br /> de la question et du chemin </td>
 	<td> Chemin facile </td>
-	<td> Chemin facile / difficle </td>
-	<td> Chemin difficle / facile </td>
-	<td> Chemin difficle </td>
+	<td> Chemin facile / difficile </td>
+	<td> Chemin difficile / facile </td>
+	<td> Chemin difficile </td>
 	</tr>
    <tr>
    	<?php
