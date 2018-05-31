@@ -11,10 +11,11 @@
 	</head>
 
 	<body>
-		<p>
-			Notre page de statistiques des joueurs
-		</p>
-
+		
+		<u>
+		<h3 align="center">Notre page de statistique des joueurs</h3>			
+		</u>
+		
 		<?php
 		require ("config.php");
 
@@ -806,5 +807,10 @@
         <form name="frm" action="./stats6.php" method="post" align="center">
 				<input class="mdl-button mdl-button--raised mdl-button--colored" type="submit" value="Précédent">
 		</form>
+		<br />
+		<form name="frm" action="./page_accueil.php" method="post" align="center">
+				<input class="mdl-button mdl-button--raised mdl-button--colored" type="submit" value="Accueil">
+		</form>
+		
 	</body>
 </html>

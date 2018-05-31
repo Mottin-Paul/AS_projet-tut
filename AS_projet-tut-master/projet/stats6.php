@@ -12,10 +12,11 @@
 	</head>
 
 	<body>
-		<p>
-			Notre page de statistiques des joueurs
-		</p>
-
+		
+		<u>
+		<h3 align="center">Notre page de statistique des joueurs</h3>			
+		</u>
+		
 		<?php
 		require ("config.php");
 
